@@ -1,7 +1,7 @@
 {
   "name": "dav-language-support",
-  "displayName": "DAV Language Support",
-  "description": "Support complet pour le langage de programmation DAV - Code en français et anglais avec syntaxe naturelle",
+  "displayName": "DAV - Bilingual Programming Language",
+  "description": "🇫🇷🇬🇧 First bilingual programming language - Write code in French or English with natural syntax. Revolutionary DAV language with syntax highlighting, themes, and snippets.",
   "version": "1.0.0",
   "publisher": "Asabi89",
   "icon": "images/dav-extension-icon.png",
