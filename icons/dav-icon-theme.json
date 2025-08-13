@@ -1,0 +1,23 @@
+{
+    "iconDefinitions": {
+        "dav-file": {
+            "iconPath": "./dav-file-icon-dark.svg"
+        },
+        "dav-file-light": {
+            "iconPath": "./dav-file-icon-light.svg"
+        }
+    },
+    "fileExtensions": {
+        "dav": "dav-file"
+    },
+    "light": {
+        "fileExtensions": {
+            "dav": "dav-file-light"
+        }
+    },
+    "highContrast": {
+        "fileExtensions": {
+            "dav": "dav-file"
+        }
+    }
+}

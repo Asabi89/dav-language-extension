@@ -1,0 +1,202 @@
+{
+  "Variable Declaration French": {
+    "prefix": ["var-fr", "jai"],
+    "body": [
+      "J'ai ${1|un nombre,une chaîne,une liste,un booléen|} appelé ${2:nom_variable}."
+    ],
+    "description": "Déclaration de variable en français"
+  },
+  "Variable Declaration English": {
+    "prefix": ["var-en", "ihave"],
+    "body": [
+      "I have ${1|a number,a string,a list,a boolean|} called ${2:variable_name}."
+    ],
+    "description": "Variable declaration in English"
+  },
+  "Assignment French": {
+    "prefix": ["assign-fr", "assigne"],
+    "body": [
+      "Assigne ${1:valeur} à ${2:variable}."
+    ],
+    "description": "Assignation de valeur en français"
+  },
+  "Assignment English": {
+    "prefix": ["assign-en", "set"],
+    "body": [
+      "Set ${1:variable} to ${2:value}."
+    ],
+    "description": "Value assignment in English"
+  },
+  "Display French": {
+    "prefix": ["print-fr", "affiche"],
+    "body": [
+      "Affiche ${1:\"message\"} sur l'écran."
+    ],
+    "description": "Affichage en français"
+  },
+  "Display English": {
+    "prefix": ["print-en", "show"],
+    "body": [
+      "Show ${1:\"message\"} on the screen."
+    ],
+    "description": "Display in English"
+  },
+  "Function French": {
+    "prefix": ["func-fr", "fonction"],
+    "body": [
+      "Crée une fonction nommée ${1:nom_fonction} qui prend ${2|un nombre,une chaîne,deux nombres|} ${3:parametre}.",
+      "    ${4:// Corps de la fonction}",
+      "    Je retourne ${5:resultat}."
+    ],
+    "description": "Définition de fonction en français"
+  },
+  "Function English": {
+    "prefix": ["func-en", "function"],
+    "body": [
+      "Create a function named ${1:function_name} that takes ${2|a number,a string,two numbers|} ${3:parameter}.",
+      "    ${4:// Function body}",
+      "    I will return ${5:result}."
+    ],
+    "description": "Function definition in English"
+  },
+  "If Condition French": {
+    "prefix": ["if-fr", "si"],
+    "body": [
+      "Si ${1:condition}:",
+      "    ${2:// Action si vrai}",
+      "Sinon:",
+      "    ${3:// Action si faux}"
+    ],
+    "description": "Condition Si-Sinon en français"
+  },
+  "If Condition English": {
+    "prefix": ["if-en", "if"],
+    "body": [
+      "If ${1:condition}:",
+      "    ${2:// Action if true}",
+      "Otherwise:",
+      "    ${3:// Action if false}"
+    ],
+    "description": "If-Otherwise condition in English"
+  },
+  "While Loop French": {
+    "prefix": ["while-fr", "tantque"],
+    "body": [
+      "Tant que ${1:condition}:",
+      "    ${2:// Corps de la boucle}",
+      "    ${3:// N'oubliez pas de modifier la condition}"
+    ],
+    "description": "Boucle Tant que en français"
+  },
+  "While Loop English": {
+    "prefix": ["while-en", "while"],
+    "body": [
+      "While ${1:condition}:",
+      "    ${2:// Loop body}",
+      "    ${3:// Don't forget to modify the condition}"
+    ],
+    "description": "While loop in English"
+  },
+  "For Loop Range French": {
+    "prefix": ["for-range-fr", "pour-plage"],
+    "body": [
+      "Pour ${1:i} dans la plage ${2:1} à ${3:10}:",
+      "    ${4:// Corps de la boucle}"
+    ],
+    "description": "Boucle Pour avec plage en français"
+  },
+  "For Loop Range English": {
+    "prefix": ["for-range-en", "for-range"],
+    "body": [
+      "For ${1:i} in range ${2:1} to ${3:10}:",
+      "    ${4:// Loop body}"
+    ],
+    "description": "For loop with range in English"
+  },
+  "For Loop List French": {
+    "prefix": ["for-list-fr", "pour-chaque"],
+    "body": [
+      "Pour chaque ${1:element} dans ${2:liste}:",
+      "    ${3:// Traiter chaque élément}"
+    ],
+    "description": "Boucle Pour chaque élément en français"
+  },
+  "For Loop List English": {
+    "prefix": ["for-list-en", "for-each"],
+    "body": [
+      "For each ${1:item} in ${2:list}:",
+      "    ${3:// Process each item}"
+    ],
+    "description": "For each loop in English"
+  },
+  "Complete Program French": {
+    "prefix": ["prog-fr", "programme"],
+    "body": [
+      "// Programme DAV en français",
+      "",
+      "// Déclaration des variables",
+      "J'ai un nombre appelé ${1:x}.",
+      "Assigne ${2:42} à ${1:x}.",
+      "",
+      "// Fonction principale",
+      "Crée une fonction nommée ${3:principale} qui ne prend rien.",
+      "    Affiche \"Bonjour le monde !\" sur l'écran.",
+      "    Affiche ${1:x} sur l'écran.",
+      "",
+      "// Appel de la fonction",
+      "Appelle ${3:principale}().",
+      "",
+      "${0:// Votre code ici}"
+    ],
+    "description": "Programme complet en français"
+  },
+  "Complete Program English": {
+    "prefix": ["prog-en", "program"],
+    "body": [
+      "// DAV Program in English",
+      "",
+      "// Variable declarations",
+      "I have a number called ${1:x}.",
+      "Set ${1:x} to ${2:42}.",
+      "",
+      "// Main function",
+      "Create a function named ${3:main} that takes nothing.",
+      "    Show \"Hello World!\" on the screen.",
+      "    Show ${1:x} on the screen.",
+      "",
+      "// Function call",
+      "Call ${3:main}().",
+      "",
+      "${0:// Your code here}"
+    ],
+    "description": "Complete program in English"
+  },
+  "Import Module French": {
+    "prefix": ["import-fr", "importe"],
+    "body": [
+      "Importe le module ${1:math}."
+    ],
+    "description": "Import de module en français"
+  },
+  "Import Module English": {
+    "prefix": ["import-en", "import"],
+    "body": [
+      "Import the module ${1:math}."
+    ],
+    "description": "Module import in English"
+  },
+  "User Input French": {
+    "prefix": ["input-fr", "demande"],
+    "body": [
+      "Demande à l'utilisateur pour ${1:variable}."
+    ],
+    "description": "Demande de saisie utilisateur en français"
+  },
+  "User Input English": {
+    "prefix": ["input-en", "ask"],
+    "body": [
+      "Ask the user for ${1:variable}."
+    ],
+    "description": "User input in English"
+  }
+}

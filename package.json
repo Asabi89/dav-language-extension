@@ -1,0 +1,175 @@
+{
+  "name": "dav-language-support",
+  "displayName": "DAV Language Support",
+  "description": "Support complet pour le langage de programmation DAV - Code en français et anglais avec syntaxe naturelle",
+  "version": "1.0.0",
+  "publisher": "dav-language",
+  "icon": "images/dav-extension-icon.png",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Asabi89/dav-language-extension.git"
+  },
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets",
+    "Themes",
+    "Language Packs"
+  ],
+  "keywords": [
+    "dav",
+    "français",
+    "french",
+    "english",
+    "bilingual",
+    "natural",
+    "programming",
+    "language"
+  ],
+  "activationEvents": [
+    "onLanguage:dav"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "dav",
+        "aliases": [
+          "DAV",
+          "dav"
+        ],
+        "extensions": [
+          ".dav"
+        ],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./icons/dav-file-icon-light.svg",
+          "dark": "./icons/dav-file-icon-dark.svg"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "dav",
+        "scopeName": "source.dav",
+        "path": "./syntaxes/dav.tmLanguage.json"
+      }
+    ],
+    "themes": [
+      {
+        "label": "DAV Dark Theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/dav-dark-theme.json"
+      },
+      {
+        "label": "DAV Light Theme",
+        "uiTheme": "vs",
+        "path": "./themes/dav-light-theme.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "dav",
+        "path": "./snippets/dav-snippets.json"
+      }
+    ],
+    "iconThemes": [
+      {
+        "id": "dav-icons",
+        "label": "DAV File Icons",
+        "path": "./icons/dav-icon-theme.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "dav.runFile",
+        "title": "Exécuter le fichier DAV",
+        "icon": "$(play)"
+      },
+      {
+        "command": "dav.showLogo",
+        "title": "Afficher le logo DAV",
+        "icon": "$(symbol-misc)"
+      },
+      {
+        "command": "dav.openWebEditor",
+        "title": "Ouvrir l'éditeur web DAV",
+        "icon": "$(browser)"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "when": "resourceExtname == .dav",
+          "command": "dav.runFile",
+          "group": "navigation"
+        },
+        {
+          "when": "resourceExtname == .dav",
+          "command": "dav.showLogo",
+          "group": "navigation"
+        }
+      ],
+      "explorer/context": [
+        {
+          "when": "resourceExtname == .dav",
+          "command": "dav.runFile",
+          "group": "navigation"
+        },
+        {
+          "when": "resourceExtname == .dav",
+          "command": "dav.openWebEditor",
+          "group": "navigation"
+        }
+      ]
+    },
+    "configuration": {
+      "type": "object",
+      "title": "DAV Language Configuration",
+      "properties": {
+        "dav.showLogo": {
+          "type": "boolean",
+          "default": true,
+          "description": "Afficher le logo DAV en haut de l'éditeur"
+        },
+        "dav.interpreterPath": {
+          "type": "string",
+          "default": "dav",
+          "description": "Chemin vers l'interpréteur DAV"
+        },
+        "dav.enableSyntaxHighlighting": {
+          "type": "boolean",
+          "default": true,
+          "description": "Activer la coloration syntaxique DAV"
+        },
+        "dav.language": {
+          "type": "string",
+          "enum": [
+            "french",
+            "english",
+            "both"
+          ],
+          "default": "both",
+          "description": "Langage préféré pour les suggestions"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "test": "echo \"No tests yet\""
+  },
+  "devDependencies": {
+    "@types/node": "^16.18.126",
+    "@types/vscode": "^1.74.0",
+    "typescript": "^4.9.5"
+  },
+  "author": "Asabi89",
+  "license": "MIT",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Asabi89/dav-language-extension/issues"
+  },
+  "homepage": "https://github.com/Asabi89/dav-language-extension#readme"
+}

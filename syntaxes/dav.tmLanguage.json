@@ -1,0 +1,199 @@
+{
+  "name": "DAV",
+  "scopeName": "source.dav",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#keywords-french"
+    },
+    {
+      "include": "#keywords-english"
+    },
+    {
+      "include": "#natural-language-fr"
+    },
+    {
+      "include": "#natural-language-en"
+    },
+    {
+      "include": "#functions"
+    },
+    {
+      "include": "#variables"
+    },
+    {
+      "include": "#operators"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.dav",
+          "match": "//.*$"
+        },
+        {
+          "name": "comment.block.dav",
+          "begin": "/\\*",
+          "end": "\\*/",
+          "patterns": [
+            {
+              "name": "constant.character.escape.dav",
+              "match": "\\\\."
+            }
+          ]
+        },
+        {
+          "name": "comment.line.hash.dav",
+          "match": "#.*$"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.dav",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.dav",
+              "match": "\\\\."
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.single.dav",
+          "begin": "'",
+          "end": "'",
+          "patterns": [
+            {
+              "name": "constant.character.escape.dav",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.dav",
+          "match": "\\b\\d+(\\.\\d+)?\\b"
+        }
+      ]
+    },
+    "keywords-french": {
+      "patterns": [
+        {
+          "name": "keyword.control.dav.french",
+          "match": "\\b(Si|Sinon|Tant que|Pour|Fais|Arrête|Continue|Je retourne|Retourne)\\b"
+        },
+        {
+          "name": "keyword.declaration.dav.french",
+          "match": "\\b(J'ai|Crée|Créer|Définis)\\b"
+        },
+        {
+          "name": "keyword.assignment.dav.french", 
+          "match": "\\b(Assigne|Mets|Définis)\\b"
+        },
+        {
+          "name": "keyword.output.dav.french",
+          "match": "\\b(Affiche|Montre|Imprime)\\b"
+        },
+        {
+          "name": "keyword.input.dav.french",
+          "match": "\\b(Demande à l'utilisateur)\\b"
+        },
+        {
+          "name": "keyword.import.dav.french",
+          "match": "\\b(Importe)\\b"
+        },
+        {
+          "name": "keyword.list.dav.french",
+          "match": "\\b(Ajoute|Enlève|Augmente|Diminue)\\b"
+        }
+      ]
+    },
+    "keywords-english": {
+      "patterns": [
+        {
+          "name": "keyword.control.dav.english",
+          "match": "\\b(If|Otherwise|While|For|Do|Break|Continue|I will return|Return)\\b"
+        },
+        {
+          "name": "keyword.declaration.dav.english",
+          "match": "\\b(I have|Create|Define)\\b"
+        },
+        {
+          "name": "keyword.assignment.dav.english",
+          "match": "\\b(Set|Assign|Put)\\b"
+        },
+        {
+          "name": "keyword.output.dav.english",
+          "match": "\\b(Show|Display|Print)\\b"
+        },
+        {
+          "name": "keyword.input.dav.english",
+          "match": "\\b(Ask the user)\\b"
+        },
+        {
+          "name": "keyword.import.dav.english",
+          "match": "\\b(Import)\\b"
+        },
+        {
+          "name": "keyword.list.dav.english",
+          "match": "\\b(Add|Remove|Increase|Decrease)\\b"
+        }
+      ]
+    },
+    "natural-language-fr": {
+      "patterns": [
+        {
+          "name": "keyword.natural.dav.french",
+          "match": "\\b(un|une|le|la|les|de|du|des|à|au|aux|est|sont|et|ou|pas|plus|moins|fois|multiplié par|divisé par|supérieur|inférieur|égal|appelé|nommée|qui prend|avec paramètres|dans la plage|chaque)\\b"
+        }
+      ]
+    },
+    "natural-language-en": {
+      "patterns": [
+        {
+          "name": "keyword.natural.dav.english", 
+          "match": "\\b(a|an|the|is|are|and|or|not|plus|minus|times|multiplied by|divided by|greater than|less than|equal to|called|named|that takes|with parameters|in range|each)\\b"
+        }
+      ]
+    },
+    "functions": {
+      "patterns": [
+        {
+          "name": "entity.name.function.dav",
+          "match": "\\b[a-zA-ZÀ-ÿ_][a-zA-ZÀ-ÿ0-9_]*(?=\\s*\\()"
+        }
+      ]
+    },
+    "variables": {
+      "patterns": [
+        {
+          "name": "variable.other.dav",
+          "match": "\\b[a-zA-ZÀ-ÿ_][a-zA-ZÀ-ÿ0-9_]*\\b"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.dav",
+          "match": "[+\\-*/=<>!]+"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "comments": {
+    "lineComment": "//",
+    "blockComment": ["/*", "*/"]
+  },
+  "brackets": [
+    ["{", "}"],
+    ["[", "]"],
+    ["(", ")"]
+  ],
+  "autoClosingPairs": [
+    ["{", "}"],
+    ["[", "]"],
+    ["(", ")"],
+    ["\"", "\""],
+    ["'", "'"]
+  ],
+  "surroundingPairs": [
+    ["{", "}"],
+    ["[", "]"],
+    ["(", ")"],
+    ["\"", "\""],
+    ["'", "'"]
+  ],
+  "indentationRules": {
+    "increaseIndentPattern": "^.*\\{\\s*$|^.*(Si|If|Sinon|Otherwise|Tant que|While|Pour|For|Fais|Do|Crée|Create|Définis|Define).*:$",
+    "decreaseIndentPattern": "^\\s*\\}.*$"
+  },
+  "folding": {
+    "markers": {
+      "start": "^\\s*//\\s*#region",
+      "end": "^\\s*//\\s*#endregion"
+    }
+  },
+  "wordPattern": "[a-zA-ZÀ-ÿ_][a-zA-ZÀ-ÿ0-9_]*",
+  "onEnterRules": [
+    {
+      "beforeText": "^\\s*(Si|If|Sinon|Otherwise|Tant que|While|Pour|For|Fais|Do|Crée|Create|Définis|Define).*:$",
+      "action": {
+        "indent": "indent"
+      }
+    }
+  ]
+}
