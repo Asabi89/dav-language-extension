@@ -3,7 +3,7 @@
   "displayName": "DAV Language Support",
   "description": "Support complet pour le langage de programmation DAV - Code en français et anglais avec syntaxe naturelle",
   "version": "1.0.0",
-  "publisher": "dav-language",
+  "publisher": "Asabi89",
   "icon": "images/dav-extension-icon.png",
   "repository": {
     "type": "git",
