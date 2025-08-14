@@ -1,10 +1,10 @@
 {
     "iconDefinitions": {
         "dav-file": {
-            "iconPath": "./dav-file-icon-dark.svg"
+            "iconPath": "../images/dav-file-dark.png"
         },
         "dav-file-light": {
-            "iconPath": "./dav-file-icon-light.svg"
+            "iconPath": "../images/dav-file-light.png"
         }
     },
     "fileExtensions": {

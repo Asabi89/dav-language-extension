@@ -1,10 +1,10 @@
 {
   "name": "asitech-dav-language",
-  "displayName": "Asitech DAV - Bilingual Programming Language",
+  "displayName": "asitech",
   "description": "🇫🇷🇬🇧 Revolutionary bilingual programming language by Asitech - Write code in French or English with natural syntax. Complete IDE support with auto-indent, auto-completion, error detection, and advanced features.",
-  "version": "2.1.0",
+  "version": "2.3.0",
   "publisher": "asitech",
-  "icon": "images/dav-extension-icon.png",
+  "icon": "images/dav-icon.png",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Asabi89/dav-language-extension.git"
@@ -45,8 +45,8 @@
         ],
         "configuration": "./language-configuration.json",
         "icon": {
-          "light": "./icons/dav-file-icon-light.svg",
-          "dark": "./icons/dav-file-icon-dark.svg"
+          "light": "./images/dav-file-light.png",
+          "dark": "./images/dav-file-dark.png"
         }
       }
     ],
