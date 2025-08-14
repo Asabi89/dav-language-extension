@@ -23,21 +23,52 @@
     ["'", "'"]
   ],
   "indentationRules": {
-    "increaseIndentPattern": "^.*\\{\\s*$|^.*(Si|If|Sinon|Otherwise|Tant que|While|Pour|For|Fais|Do|Crée|Create|Définis|Define).*:$",
-    "decreaseIndentPattern": "^\\s*\\}.*$"
+    "increaseIndentPattern": "^\\s*(Si|If|Sinon|Else|TantQue|While|Pour|For|Crée une fonction nommée|Create a function named).*\\.$",
+    "decreaseIndentPattern": "^\\s*(FinSi|EndIf|FinTantQue|EndWhile|FinPour|EndFor|FinFonction|EndFunction|Sinon|Else)\\.$"
   },
   "folding": {
+    "offSide": true,
     "markers": {
-      "start": "^\\s*//\\s*#region",
-      "end": "^\\s*//\\s*#endregion"
+      "start": "^\\s*(Si|If|TantQue|While|Pour|For|Crée une fonction nommée|Create a function named)",
+      "end": "^\\s*(FinSi|EndIf|FinTantQue|EndWhile|FinPour|EndFor|FinFonction|EndFunction)\\."
     }
   },
-  "wordPattern": "[a-zA-ZÀ-ÿ_][a-zA-ZÀ-ÿ0-9_]*",
+  "wordPattern": "[a-zA-ZÀ-ÿ'_][a-zA-ZÀ-ÿ0-9'_\\s]*",
   "onEnterRules": [
     {
-      "beforeText": "^\\s*(Si|If|Sinon|Otherwise|Tant que|While|Pour|For|Fais|Do|Crée|Create|Définis|Define).*:$",
+      "beforeText": "^\\s*(Si|If)\\s+.*\\.$",
       "action": {
         "indent": "indent"
+      }
+    },
+    {
+      "beforeText": "^\\s*(Sinon|Else)\\.$",
+      "action": {
+        "indent": "indent"
+      }
+    },
+    {
+      "beforeText": "^\\s*(TantQue|While)\\s+.*\\.$",
+      "action": {
+        "indent": "indent"
+      }
+    },
+    {
+      "beforeText": "^\\s*(Pour|For)\\s+.*\\.$",
+      "action": {
+        "indent": "indent"
+      }
+    },
+    {
+      "beforeText": "^\\s*(Crée une fonction nommée|Create a function named).*\\.$",
+      "action": {
+        "indent": "indent"
+      }
+    },
+    {
+      "beforeText": "^\\s*(FinSi|EndIf|FinTantQue|EndWhile|FinPour|EndFor|FinFonction|EndFunction)\\.$",
+      "action": {
+        "indent": "outdent"
       }
     }
   ]
